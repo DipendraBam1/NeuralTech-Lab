@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fill these from Figma's color and text styles */
+  --color-primary: #00DE99;
+  --color-secondary: #059669;
+  --color-background: #ffffff;
+  --color-ink: #0F172A;
+  --color-neutral: #475569;
+  --color-muted: #94A3B8;
+  --font-sans: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}
