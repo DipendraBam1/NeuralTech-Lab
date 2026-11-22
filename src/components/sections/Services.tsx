@@ -19,7 +19,7 @@ const IconBox = () => (
 
 export default function Services() {
   return (
-    <section id="service" className="bg-white py-20">
+    <section id="service" className="bg-neutral/4 py-20">
       <Container>
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-md">
@@ -34,7 +34,7 @@ export default function Services() {
               ahead in a constantly evolving world.
             </p>
           </div>
-          <a href="#service" className="text-sm font-medium text-secondary hover:underline">
+          <a href="/services" className="text-sm font-medium text-secondary hover:underline">
             View All Services →
           </a>
         </div>

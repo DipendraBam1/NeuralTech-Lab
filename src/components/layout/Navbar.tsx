@@ -1,20 +1,21 @@
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '@/assets/icons/logo.svg'
 
 type NavItem = { label: string; href: string }
 
 const NAV_ITEMS: NavItem[] = [
-  { label: 'Home', href: '#home' },
-  { label: 'Service', href: '#service' },
-  { label: 'Technology', href: '#technology' },
-  { label: 'About us', href: '#about' },
-  { label: 'Blog', href: '#blog' },
+  { label: 'Home', href: '/' },
+  { label: 'Service', href: '/services' },
+  { label: 'Technology', href: '/#technology' },
+  { label: 'About us', href: '/#about' },
+  { label: 'Blog', href: '/#blog' },
 ]
 
 const Logo = () => (
-  <a href="#home" aria-label="Neural Tech Labs home">
+  <Link to="/" aria-label="Neural Tech Labs home">
     <img src={logo} alt="Neural Tech Labs" width={121} height={43} />
-  </a>
+  </Link>
 )
 
 const MoonIcon = () => (
@@ -32,6 +33,7 @@ const ArrowUpRight = () => (
 export default function Navbar() {
   const [active, setActive] = useState('Home')
   const [open, setOpen] = useState(false)
+  const location = useLocation()
 
   return (
     <header className="sticky top-4 z-50 px-4">
@@ -44,11 +46,15 @@ export default function Navbar() {
         {/* Desktop links */}
         <ul className="hidden items-center gap-2 font-[Poppins,sans-serif] text-[15px] md:flex">
           {NAV_ITEMS.map(({ label, href }) => {
-            const isActive = active === label
+            const isActive = href === '/services'
+              ? location.pathname === '/services'
+              : href === '/'
+                ? location.pathname === '/'
+                : active === label && location.pathname === '/'
             return (
               <li key={label}>
-                <a
-                  href={href}
+                <Link
+                  to={href}
                   onClick={() => setActive(label)}
                   aria-current={isActive ? 'page' : undefined}
                   className={
@@ -58,7 +64,7 @@ export default function Navbar() {
                   }
                 >
                   {label}
-                </a>
+                </Link>
               </li>
             )
           })}
@@ -70,7 +76,7 @@ export default function Navbar() {
             <MoonIcon />
           </button>
           <a
-            href="#contact"
+            href="/#contact"
             className="hidden items-center gap-2 rounded-full bg-secondary px-5 py-2.5 font-[Poppins,sans-serif] text-[14px] text-white transition-colors hover:bg-secondary/90 sm:inline-flex"
           >
             Contact Us <ArrowUpRight />
@@ -93,8 +99,8 @@ export default function Navbar() {
           <ul className="flex flex-col gap-1 font-[Poppins,sans-serif]">
             {NAV_ITEMS.map(({ label, href }) => (
               <li key={label}>
-                <a
-                  href={href}
+                <Link
+                  to={href}
                   onClick={() => {
                     setActive(label)
                     setOpen(false)
@@ -104,11 +110,11 @@ export default function Navbar() {
                   }`}
                 >
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
             <li>
-              <a href="#contact" className="mt-2 flex items-center justify-center gap-2 rounded-full bg-secondary px-5 py-3 text-white">
+              <a href="/#contact" className="mt-2 flex items-center justify-center gap-2 rounded-full bg-secondary px-5 py-3 text-white">
                 Contact Us <ArrowUpRight />
               </a>
             </li>

@@ -65,17 +65,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 border-t border-neutral/10 py-4 text-[11px] text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © 2026 Neural Tech Labs (NTECHLABS). All rights reserved. Nepal –
-            Australia Engineering Corridor.
-          </p>
-          <nav className="flex gap-4" aria-label="Legal">
-            <a href="#privacy" className="hover:text-neutral">Privacy Policy</a>
-            <a href="#terms" className="hover:text-neutral">Terms of Service</a>
-            <a href="#security" className="hover:text-neutral">Security Architecture</a>
-          </nav>
-        </div>
+
       </Container>
     </footer>
   )

@@ -9,7 +9,7 @@ export default function Hero() {
   const typed = useTypewriter(TYPED_WORDS)
 
   return (
-    <section id="home" className="relative overflow-hidden bg-gradient-to-b from-neutral/5 to-white pb-20 pt-20">
+    <section id="home" className="relative overflow-hidden bg-neutral/5 pb-20 pt-20">
       <div className="pointer-events-none absolute left-1/2 top-24 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
 
       <Container className="relative flex flex-col items-center text-center">

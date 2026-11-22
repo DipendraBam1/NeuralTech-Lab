@@ -3,7 +3,7 @@ import clientsImage from '@/assets/images/clients.jpg'
 
 export default function Clients() {
   return (
-    <section className="border-y border-neutral/15 bg-white py-10">
+    <section className="border-y border-neutral/15 bg-neutral/5 py-10">
       <Container>
         <p className="text-center text-[10px] uppercase tracking-wide text-muted">
           32+ software solutions delivered, helping businesses move forward.
