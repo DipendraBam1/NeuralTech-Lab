@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Container from "@/components/ui/Container";
+import Footer2 from "@/components/layout/Footer2";
 
 type Category = "All" | "AI" | "Software" | "Business";
 
@@ -330,7 +331,7 @@ export default function TopServices() {
 
   return (
     <>
-      <section id="services" className="bg-neutral/5 pt-16 sm:py-20">
+      <section id="services" className="bg-neutral/5 pt-28 pb-16 sm:pt-32 sm:pb-20">
         <Container>
           <header className="mx-auto max-w-2xl text-center">
             <p className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-secondary">
@@ -496,7 +497,7 @@ export default function TopServices() {
           </div>
         </Container>
       </section>
-      <section className="bg-neutral/5 px-4 pt-16 pb-0 sm:pt-20">
+      <section className="bg-neutral/5 pt-16 pb-0 sm:pt-20">
         <Container>
           <div className="mx-auto max-w-4xl text-center">
             <p className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-secondary">
@@ -572,22 +573,7 @@ export default function TopServices() {
             </a>
           </div>
         </Container>
-        <div className="-mx-4 flex flex-col gap-3 border-t border-neutral/10 border-y bg-white px-7 py-9 text-[11px] text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © 2026 Neural Tech Labs (NTECHLABS). All rights reserved.
-           </p>
-          <nav className="flex gap-4" aria-label="Legal">
-            <a href="#privacy" className="hover:text-neutral">
-              Privacy Policy
-            </a>
-            <a href="#terms" className="hover:text-neutral">
-              Terms of Service
-            </a>
-            <a href="#security" className="hover:text-neutral">
-              Security Architecture
-            </a>
-          </nav>
-        </div>
+<Footer2/>
       </section>
     </>
   );

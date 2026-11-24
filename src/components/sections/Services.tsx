@@ -44,7 +44,7 @@ export default function Services() {
             <li key={i}>
               <a
                 href="#service"
-                className="group block h-full rounded-xl border border-neutral/70 bg-white p-5 transition-shadow hover:shadow-lg"
+                className="group block h-full rounded-xl border border-neutral/30 bg-white p-5 transition hover:shadow-md hover:shadow-primary/30"
               >
                 <div className="flex items-start justify-between">
                   <IconBox />

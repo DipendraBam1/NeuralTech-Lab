@@ -9,7 +9,7 @@ export default function Hero() {
   const typed = useTypewriter(TYPED_WORDS)
 
   return (
-    <section id="home" className="relative overflow-hidden bg-neutral/5 pb-20 pt-20">
+    <section id="home" className="relative overflow-hidden bg-neutral/5 pb-20 pt-28 sm:pt-32">
       <div className="pointer-events-none absolute left-1/2 top-24 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
 
       <Container className="relative flex flex-col items-center text-center">
@@ -21,7 +21,7 @@ export default function Hero() {
         <h1 className="mt-6 max-w-2xl text-4xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl md:text-6xl">
           Build <span className="text-primary">Smarter.</span> Automate{' '}
           <span className="text-primary">Faster.</span> Power the{' '}
-          <span className="inline-block min-w-[1ch] text-primary">
+          <span className="inline-block min-w-[9ch] whitespace-nowrap text-primary">
             {typed}
             <span className="ml-0.5 inline-block h-[0.9em] w-[3px] translate-y-1 animate-pulse bg-ink" />
           </span>

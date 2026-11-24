@@ -7,9 +7,9 @@ type NavItem = { label: string; href: string }
 const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Service', href: '/services' },
-  { label: 'Technology', href: '/#technology' },
-  { label: 'About us', href: '/#about' },
-  { label: 'Blog', href: '/#blog' },
+  { label: 'Technology', href: '/technology' },
+  { label: 'About us', href: '/about' },
+  { label: 'Blog', href: '/blog' },
 ]
 
 const Logo = () => (
@@ -36,7 +36,7 @@ export default function Navbar() {
   const location = useLocation()
 
   return (
-    <header className="sticky top-4 z-50 px-4">
+    <header className="fixed inset-x-0 top-4 z-50 px-4">
       <nav
         className="mx-auto flex max-w-220 items-center justify-between rounded-full bg-white px-6 py-3 shadow-[0_4px_10px_rgba(15,23,42,0.18)]"
         aria-label="Main"
@@ -44,10 +44,16 @@ export default function Navbar() {
         <Logo />
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-2 font-[Poppins,sans-serif] text-[15px] md:flex">
+        <ul className="hidden items-center gap-2 font-[Poppins,sans-serif] text-[15px] md:ml-10 md:flex">
           {NAV_ITEMS.map(({ label, href }) => {
             const isActive = href === '/services'
               ? location.pathname === '/services'
+              : href === '/technology'
+                ? location.pathname === '/technology'
+              : href === '/about'
+                ? location.pathname === '/about'
+              : href === '/blog'
+                ? location.pathname.startsWith('/blog')
               : href === '/'
                 ? location.pathname === '/'
                 : active === label && location.pathname === '/'
@@ -76,7 +82,7 @@ export default function Navbar() {
             <MoonIcon />
           </button>
           <a
-            href="/#contact"
+            href="/contact"
             className="hidden items-center gap-2 rounded-full bg-secondary px-5 py-2.5 font-[Poppins,sans-serif] text-[14px] text-white transition-colors hover:bg-secondary/90 sm:inline-flex"
           >
             Contact Us <ArrowUpRight />
@@ -114,7 +120,7 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <a href="/#contact" className="mt-2 flex items-center justify-center gap-2 rounded-full bg-secondary px-5 py-3 text-white">
+              <a href="/contact" className="mt-2 flex items-center justify-center gap-2 rounded-full bg-secondary px-5 py-3 text-white">
                 Contact Us <ArrowUpRight />
               </a>
             </li>

@@ -1,3 +1,4 @@
+import Footer from '@/components/layout/Footer'
 import AboutUS from '@/components/sections/AboutUS'
 import Clients from '@/components/sections/Clients'
 import Hero from '@/components/sections/Hero'
@@ -12,6 +13,7 @@ export default function Home() {
       <Services />
       <TopServices/>
       <AboutUS/>
-    </>
+      <Footer/>
+     </>
   )
 }
