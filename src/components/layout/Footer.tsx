@@ -1,7 +1,21 @@
 import logo from '@/assets/icons/logo.svg'
 import Container from '@/components/ui/Container'
 
-const navigation = ['Home', 'Services', 'Capabilities', 'About Us', 'Clients']
+const navigation = [
+  'Home',
+  'Services',
+    'Clients',
+  'Contact Us',
+  'Talk to Our Team',
+]
+
+const linkTargets: Record<string, string> = {
+  Home: '/',
+  Services: '#service',
+    Clients: '/#clients',
+  'Contact Us': '/contact',
+  'Talk to Our Team': '/talk-to-team',
+}
 
 const solutions = [
   'AI Automation & Workflows',
@@ -13,13 +27,13 @@ const solutions = [
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="bg-white dark:bg-dark-bg">
       <Container>
         <div className="grid gap-10 py-10 sm:grid-cols-2 lg:grid-cols-[1.7fr_0.8fr_1fr_1.5fr]">
           <div>
-            <img src={logo} alt="Neural Tech Labs" width={121} height={43} />
+            <img src={logo} alt="Neural Tech Labs" width={121} height={43} className="dark:brightness-0 dark:invert" />
 
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted dark:text-dark-muted">
               Neural Tech Labs (Ntechlabs) is an AI and enterprise software
               development powerhouse operating between Nepal and Australia.
               Bridging engineering excellence with real-world enterprise impact.
@@ -35,7 +49,7 @@ export default function Footer() {
                   key={name}
                   href="#"
                   aria-label={name}
-                  className="flex h-8 min-w-8 items-center justify-center rounded-full bg-neutral/5 px-2 text-xs font-semibold text-neutral"
+                  className="flex h-8 min-w-8 items-center justify-center rounded-full bg-neutral/5 dark:bg-dark-bg px-2 text-xs font-semibold text-neutral dark:text-dark-muted"
                 >
                   {label}
                 </a>
@@ -47,7 +61,7 @@ export default function Footer() {
           <FooterLinks title="Solutions" links={solutions} />
 
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-wide text-ink">
+            <h2 className="text-xs font-semibold uppercase tracking-wide text-ink dark:text-dark-text">
               Contact · Hubs
             </h2>
             <div className="mt-3 space-y-2">
@@ -74,13 +88,13 @@ export default function Footer() {
 function FooterLinks({ title, links }: { title: string; links: string[] }) {
   return (
     <div>
-      <h2 className="text-xs font-semibold uppercase tracking-wide text-ink">
+      <h2 className="text-xs font-semibold uppercase tracking-wide text-ink dark:text-dark-text">
         {title}
       </h2>
       <ul className="mt-3 space-y-2">
         {links.map((link) => (
           <li key={link}>
-            <a href="#" className="text-xs text-neutral hover:text-secondary">
+            <a href={linkTargets[link] ?? '#'} className="text-xs text-neutral dark:text-dark-muted hover:text-secondary">
               {link}
             </a>
           </li>
@@ -100,9 +114,9 @@ function HubCard({
   email: string
 }) {
   return (
-    <article className="rounded-lg border border-neutral/10 bg-neutral/5 p-3">
-      <h3 className="text-xs font-semibold text-ink">▣ &nbsp;{name}</h3>
-      <p className="mt-1 pl-5 text-[11px] text-muted">{location}</p>
+    <article className="rounded-lg border border-neutral/10 dark:border-dark-border bg-neutral/5 dark:bg-dark-bg p-3">
+      <h3 className="text-xs font-semibold text-ink dark:text-dark-text">▣ &nbsp;{name}</h3>
+      <p className="mt-1 pl-5 text-[11px] text-muted dark:text-dark-muted">{location}</p>
       <a
         href={`mailto:${email}`}
         className="mt-1 block pl-5 text-[11px] font-medium text-secondary"

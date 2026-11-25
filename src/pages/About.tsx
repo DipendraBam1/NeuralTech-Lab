@@ -55,10 +55,10 @@ function CenterHeading({ eyebrow }: { eyebrow: string }) {
   return (
     <header className="mx-auto max-w-2xl text-center">
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="mt-4 text-2xl font-bold leading-tight tracking-[-.04em] text-ink sm:text-3xl">
+      <h2 className="mt-4 text-2xl font-bold leading-tight tracking-[-.04em] text-ink dark:text-dark-text sm:text-3xl">
         Technology should make work easier, not more complicated.
       </h2>
-      <p className="mx-auto mt-3 max-w-xl text-xs leading-relaxed text-neutral sm:text-sm">
+      <p className="mx-auto mt-3 max-w-xl text-xs leading-relaxed text-neutral dark:text-dark-muted sm:text-sm">
         We turn business challenges into practical digital solutions that help organizations work smarter and grow with confidence.
       </p>
     </header>
@@ -68,7 +68,7 @@ function CenterHeading({ eyebrow }: { eyebrow: string }) {
 export default function About() {
   return (
     <>
-      <div className="relative isolate overflow-hidden bg-neutral/5 pb-16 sm:pb-20">
+      <div className="relative isolate overflow-hidden bg-neutral/5 dark:bg-dark-bg pb-16 sm:pb-20">
         <PageDecorations />
         <Container className="relative z-10 pt-28 sm:pt-32">
           <CenterHeading eyebrow="Our approach" />
@@ -76,10 +76,10 @@ export default function About() {
           <section className="grid items-center gap-8 py-12 sm:py-16 lg:grid-cols-[.82fr_1.18fr] lg:gap-12">
             <div className="max-w-md">
               <Eyebrow>Who we are</Eyebrow>
-              <h2 className="mt-4 text-2xl font-bold leading-tight tracking-[-.035em] text-ink sm:text-3xl">
+              <h2 className="mt-4 text-2xl font-bold leading-tight tracking-[-.035em] text-ink dark:text-dark-text sm:text-3xl">
                 Technology built around your business.
               </h2>
-              <div className="mt-4 space-y-3 text-xs leading-relaxed text-neutral sm:text-sm">
+              <div className="mt-4 space-y-3 text-xs leading-relaxed text-neutral dark:text-dark-muted sm:text-sm">
                 <p>
                   Neural Tech Labs partners with businesses to design, develop, and maintain technology that makes everyday operations simpler and more effective.
                 </p>
@@ -89,7 +89,7 @@ export default function About() {
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
                 {['Enterprise Proven', 'Bespoke Intelligence'].map((item) => (
-                  <span key={item} className="inline-flex items-center gap-1.5 rounded-full border border-neutral/10 bg-background px-3 py-1.5 text-[10px] text-neutral">
+                  <span key={item} className="inline-flex items-center gap-1.5 rounded-full border border-neutral/10 dark:border-dark-border bg-background dark:bg-dark-bg-light px-3 py-1.5 text-[10px] text-neutral dark:text-dark-muted">
                     <span className="text-secondary">✧</span>{item}
                   </span>
                 ))}
@@ -105,25 +105,25 @@ export default function About() {
             </div>
           </section>
 
-          <section className="border-t border-neutral/10 pt-10 sm:pt-12">
+          <section className="border-t border-neutral/10 dark:border-dark-border pt-10 sm:pt-12">
             <CenterHeading eyebrow="Our purpose" />
           </section>
 
           <section className="mt-12 sm:mt-16">
             <header className="mb-6 text-center">
               <Eyebrow>What drives us</Eyebrow>
-              <h2 className="mt-3 text-2xl font-bold tracking-tight text-ink">Our Core Values</h2>
+              <h2 className="mt-3 text-2xl font-bold tracking-tight text-ink dark:text-dark-text">Our Core Values</h2>
             </header>
 
             <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
               {values.map((value) => (
-                <article key={value.number} className="flex min-h-40 flex-col rounded-xl border border-neutral/10 bg-background p-5 shadow-sm sm:p-6">
+                <article key={value.number} className="flex min-h-40 flex-col rounded-xl border border-neutral/10 dark:border-dark-border bg-background dark:bg-dark-bg-light p-5 shadow-sm sm:p-6">
                   <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-2xl text-secondary">
                     {value.icon}
                   </span>
-                  <h3 className="mt-5 text-sm font-semibold text-ink">{value.title}</h3>
-                  <p className="mt-2 max-w-md text-[11px] leading-relaxed text-neutral">{value.description}</p>
-                  <div className="mt-auto flex items-center justify-between border-t border-neutral/10 pt-4 mt-5 font-mono text-[9px] font-semibold tracking-wide text-secondary">
+                  <h3 className="mt-5 text-sm font-semibold text-ink dark:text-dark-text">{value.title}</h3>
+                  <p className="mt-2 max-w-md text-[11px] leading-relaxed text-neutral dark:text-dark-muted">{value.description}</p>
+                  <div className="mt-auto flex items-center justify-between border-t border-neutral/10 dark:border-dark-border pt-4 mt-5 font-mono text-[9px] font-semibold tracking-wide text-secondary">
                     <span>{value.number} / {value.category}</span>
                     <span aria-hidden="true" className='text-lg'>{value.icon}</span>
                   </div>
@@ -142,15 +142,15 @@ export default function About() {
             </div>
             <div className="order-1 lg:order-2">
               <Eyebrow>How we work</Eyebrow>
-              <h2 className="mt-4 max-w-lg text-2xl font-bold leading-tight tracking-[-.035em] text-ink sm:text-3xl">
+              <h2 className="mt-4 max-w-lg text-2xl font-bold leading-tight tracking-[-.035em] text-ink dark:text-dark-text sm:text-3xl">
                 From ideas to real-world solutions.
               </h2>
-              <p className="mt-3 max-w-lg text-xs leading-relaxed text-neutral sm:text-sm">
+              <p className="mt-3 max-w-lg text-xs leading-relaxed text-neutral dark:text-dark-muted sm:text-sm">
                 We combine technical expertise, collaborative problem-solving, and thoughtful development to turn ideas into useful digital products.
               </p>
               <ol className="mt-6 space-y-2.5">
                 {workSteps.map((step, index) => (
-                  <li key={step} className="flex items-center gap-3 rounded-full border border-neutral/10 bg-background px-3 py-2 text-[11px] font-bold text-ink shadow-sm sm:px-4">
+                  <li key={step} className="flex items-center gap-3 rounded-full border border-neutral/10 dark:border-dark-border bg-background dark:bg-dark-bg-light px-3 py-2 text-[11px] font-bold text-ink dark:text-dark-text shadow-sm sm:px-4">
                     <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-primary/20 p-3 font-mono text-[9px] font-bold text-secondary">
                       {String(index + 1).padStart(2, '0')}
                     </span>
@@ -162,7 +162,7 @@ export default function About() {
           </section>
         </Container>
       </div>
-      <Footer2 />
+      <Footer2 darkTheme />
     </>
   )
 }

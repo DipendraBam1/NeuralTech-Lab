@@ -9,13 +9,13 @@ const Chevron = () => (
 
 export default function TopServices() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white dark:bg-dark-bg py-24">
       <Container className="max-w-3xl">
         <div className="text-center">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-muted">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-muted dark:text-dark-muted">
             Technology that moves your business forward
           </p>
-          <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+          <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-ink dark:text-dark-text sm:text-4xl">
             Top services of <span className="text-secondary">Ntechlabs</span>
           </h2>
         </div>
@@ -25,13 +25,13 @@ export default function TopServices() {
             <li key={i}>
               <a
                 href={item.href}
-                className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3.5 transition-colors hover:border-emerald-300 hover:bg-emerald-50/40"
+                className="group flex items-center gap-3 rounded-xl border border-slate-200 dark:border-dark-border bg-white dark:bg-dark-bg-light px-4 py-3.5 transition-colors hover:border-emerald-300 hover:bg-emerald-50/40 dark:hover:bg-secondary/10"
               >
-                <span className="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[9px] text-neutral">
+                <span className="rounded bg-slate-100 dark:bg-dark-bg-light px-1.5 py-0.5 font-mono text-[9px] text-neutral dark:text-dark-muted">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <span className="flex-1 text-[13px] font-semibold text-ink">{item.title}</span>
-                <span className="text-slate-400 transition-transform group-hover:translate-x-0.5 group-hover:text-emerald-600">
+                <span className="flex-1 text-[13px] font-semibold text-ink dark:text-dark-text">{item.title}</span>
+                <span className="text-slate-400 dark:text-dark-muted transition-transform group-hover:translate-x-0.5 group-hover:text-emerald-600">
                   <Chevron />
                 </span>
               </a>

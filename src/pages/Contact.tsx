@@ -16,7 +16,7 @@ const services = [
   'Maintenance & Support',
 ]
 
-const fieldClassName = 'mt-1.5 w-full rounded-lg border border-transparent bg-neutral/5 px-3 py-3 text-xs text-ink outline-none transition placeholder:text-muted focus:border-secondary/40 focus:ring-2 focus:ring-primary/20'
+const fieldClassName = 'mt-1.5 w-full rounded-lg border border-transparent bg-neutral/5 dark:bg-dark-bg px-3 py-3 text-xs text-ink dark:text-dark-text outline-none transition placeholder:text-muted dark:placeholder:text-dark-muted focus:border-secondary/40 focus:ring-2 focus:ring-primary/20'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
@@ -34,7 +34,7 @@ export default function Contact() {
 
   return (
     <>
-      <div className="relative overflow-hidden bg-neutral/5">
+      <div className="relative overflow-hidden bg-neutral/5 dark:bg-dark-bg">
         <img aria-hidden="true" src={polygonDecoration} alt="" className="pointer-events-none absolute -left-10 -top-8 h-[220px] w-[150px] object-contain object-left-top opacity-75 sm:h-[280px] sm:w-[166px]" />
         <img aria-hidden="true" src={dottedDecoration} alt="" className="pointer-events-none absolute -left-8 top-20 h-20 w-[72px] object-contain opacity-90" />
         <img aria-hidden="true" src={dottedDecoration} alt="" className="pointer-events-none absolute -right-3 top-3 hidden h-24 w-24 object-contain opacity-90 sm:block" />
@@ -46,14 +46,14 @@ export default function Contact() {
               <span className="inline-flex items-center gap-2 rounded-full bg-primary/15 px-3 py-1 font-mono text-[9px] font-semibold uppercase tracking-[.13em] text-secondary">
                 <span className="h-1.5 w-1.5 rounded-full bg-secondary" />Contact our team
               </span>
-              <h1 className="mt-4 max-w-xl text-4xl font-bold leading-[1.08] tracking-[-.045em] text-ink sm:text-5xl">
+              <h1 className="mt-4 max-w-xl text-4xl font-bold leading-[1.08] tracking-[-.045em] text-ink dark:text-dark-text sm:text-5xl">
                 Let’s discuss your next project.
               </h1>
-              <p className="mt-3 max-w-sm text-sm leading-6 text-neutral">
+              <p className="mt-3 max-w-sm text-sm leading-6 text-neutral dark:text-dark-muted">
                 Have a challenge to solve or an idea to build? Let’s explore the right technology together.
               </p>
-              <h2 className="mt-6 text-base font-semibold text-ink">Technology that moves your business forward.</h2>
-              <p className="mt-1 max-w-sm text-xs leading-5 text-neutral">
+              <h2 className="mt-6 text-base font-semibold text-ink dark:text-dark-text">Technology that moves your business forward.</h2>
+              <p className="mt-1 max-w-sm text-xs leading-5 text-neutral dark:text-dark-muted">
                 From custom software to AI-powered solutions, our team helps turn complex business needs into practical digital products.
               </p>
               <img
@@ -63,31 +63,31 @@ export default function Contact() {
               />
             </section>
 
-            <section className="relative z-10 rounded-2xl bg-background p-5 shadow-xl shadow-ink/5 sm:p-7 lg:p-8">
-              <h2 className="text-2xl font-bold tracking-tight text-ink">Send an inquiry</h2>
-              <p className="mt-1 text-xs text-neutral">Share a few details and we’ll know how to help.</p>
+            <section className="relative z-10 rounded-2xl bg-background dark:bg-dark-bg-light p-5 shadow-xl shadow-ink/5 sm:p-7 lg:p-8">
+              <h2 className="text-2xl font-bold tracking-tight text-ink dark:text-dark-text">Send an inquiry</h2>
+              <p className="mt-1 text-xs text-neutral dark:text-dark-muted">Share a few details and we’ll know how to help.</p>
 
               <form className="mt-5 space-y-3" onSubmit={handleSubmit}>
-                <label className="block text-sm font-semibold text-ink">
+                <label className="block text-sm font-semibold text-ink dark:text-dark-text">
                   Full name <span className="text-secondary">*</span>
                   <input className={fieldClassName} name="name" type="text" placeholder="Enter your name" autoComplete="name" required />
                 </label>
-                <label className="block text-sm font-semibold text-ink">
+                <label className="block text-sm font-semibold text-ink dark:text-dark-text">
                   Work email <span className="text-secondary">*</span>
                   <input className={fieldClassName} name="email" type="email" placeholder="you@company.com" autoComplete="email" required />
                 </label>
-                <label className="block text-sm font-semibold text-ink">
+                <label className="block text-sm font-semibold text-ink dark:text-dark-text">
                   Company name
                   <input className={fieldClassName} name="company" type="text" placeholder="Your company (optional)" autoComplete="organization" />
                 </label>
-                <label className="block text-sm font-semibold text-ink">
+                <label className="block text-sm font-semibold text-ink dark:text-dark-text">
                   Service of interest <span className="text-secondary">*</span>
                   <select className={fieldClassName} name="service" defaultValue="" required>
                     <option value="" disabled>Select a service</option>
                     {services.map((service) => <option key={service}>{service}</option>)}
                   </select>
                 </label>
-                <label className="block text-sm font-semibold text-ink">
+                <label className="block text-sm font-semibold text-ink dark:text-dark-text">
                   Project details <span className="text-secondary">*</span>
                   <textarea className={`${fieldClassName} min-h-24 resize-y`} name="details" placeholder="Tell us about your idea..." required />
                 </label>
@@ -95,7 +95,7 @@ export default function Contact() {
                   Submit inquiry <span aria-hidden="true">↗</span>
                 </button>
                 {submitted && <p role="status" className="text-center text-[10px] text-secondary">Your email app is opening with your inquiry ready to send.</p>}
-                <p className="flex items-center justify-center gap-1.5 pt-1 text-center text-xs text-neutral">
+                <p className="flex items-center justify-center gap-1.5 pt-1 text-center text-xs text-neutral dark:text-dark-muted">
                   <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2" /><path d="M8 10V7a4 4 0 1 1 8 0v3" /></svg>
                   Your information will only be used to respond to your inquiry.
                 </p>
@@ -104,7 +104,7 @@ export default function Contact() {
           </div>
         </Container>
       </div>
-      <Footer2 />
+      <Footer2 darkTheme />
     </>
   )
 }

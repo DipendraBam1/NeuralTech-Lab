@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @theme {
   /* Fill these from Figma's color and text styles */
   --color-primary: #00DE99;
@@ -10,4 +12,12 @@
   --color-muted: #94A3B8;
   --font-sans: "Inter", sans-serif;
   --font-poppins: "Poppins", sans-serif;
+  --color-dark-bg-light: #11191F;
+  --color-dark-bg: #070B08;
+  --color-dark-nav-bg: #292E2C;
+  --color-dark-text: #F8FAFC;
+  --color-dark-muted: #94A3B8;
+  --color-dark-border: #263238;
+
 }
+

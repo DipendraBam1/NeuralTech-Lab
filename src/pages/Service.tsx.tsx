@@ -171,12 +171,12 @@ function ServiceVisual({ kind }: { kind: Service["visual"] }) {
   return (
     <div className="relative flex h-24 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-neutral/5 via-primary/10 to-primary/20">
       {kind === "automation" && (
-        <div className="flex items-center gap-2 text-[8px] font-medium text-neutral">
-          <span className="rounded border border-neutral/10 bg-white px-2 py-1">
+        <div className="flex items-center gap-2 text-[8px] font-medium text-neutral dark:text-dark-muted">
+          <span className="rounded border border-neutral/10 dark:border-dark-border bg-white dark:bg-dark-bg-light px-2 py-1">
             Input
           </span>
           <span className="text-secondary">→</span>
-          <span className="rounded border border-primary/20 bg-white px-2 py-1">
+          <span className="rounded border border-primary/20 bg-white dark:bg-dark-bg-light px-2 py-1">
             Classify
           </span>
           <span className="text-secondary">→</span>
@@ -189,14 +189,14 @@ function ServiceVisual({ kind }: { kind: Service["visual"] }) {
       )}
 
       {kind === "software" && (
-        <div className="w-3/4 rounded-md border border-neutral/10 bg-white/80 p-3">
+        <div className="w-3/4 rounded-md border border-neutral/10 dark:border-dark-border bg-white/80 dark:bg-dark-bg-light/80 p-3">
           <div className="flex gap-1">
             <i className="h-1.5 w-1.5 rounded-full bg-primary" />
             <i className="h-1.5 w-1.5 rounded-full bg-secondary/50" />
             <i className="h-1.5 w-1.5 rounded-full bg-muted" />
           </div>
           <div className="mt-3 space-y-1.5">
-            <div className="h-1 w-full rounded bg-neutral/10" />
+            <div className="h-1 w-full rounded bg-neutral/10 dark:bg-dark-border" />
             <div className="h-1 w-3/4 rounded bg-primary/50" />
             <div className="h-1 w-5/6 rounded bg-secondary/50" />
           </div>
@@ -225,7 +225,7 @@ function ServiceVisual({ kind }: { kind: Service["visual"] }) {
           {Array.from({ length: 6 }, (_, i) => (
             <span
               key={i}
-              className="h-5 w-10 rounded border border-primary/30 bg-white/80"
+              className="h-5 w-10 rounded border border-primary/30 bg-white/80 dark:bg-dark-bg-light/80"
             />
           ))}
         </div>
@@ -334,7 +334,7 @@ export default function TopServices() {
     <>
       <section
         id="services"
-        className="relative isolate overflow-hidden bg-neutral/5 pt-28 pb-16 sm:pt-32 sm:pb-20"
+        className="relative isolate overflow-hidden bg-neutral/5 dark:bg-dark-bg pt-28 pb-16 sm:pt-32 sm:pb-20"
       >
         <PageDecorations />
         <Container className="relative z-10">
@@ -342,22 +342,22 @@ export default function TopServices() {
             <p className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-secondary">
               • Our services
             </p>
-            <h1 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
+            <h1 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-ink dark:text-dark-text sm:text-5xl">
               Technology that moves your{" "}
               <span className="text-primary">business forward.</span>
             </h1>
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-neutral">
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-neutral dark:text-dark-muted">
               From AI automation to custom software, we help businesses build
               smarter, scale faster, and simplify complex operations.
             </p>
-            <div className="mt-5 flex flex-wrap justify-center gap-2 text-[10px] text-neutral">
-              <span className="rounded-full border border-neutral/10 bg-white px-3 py-1.5">
+            <div className="mt-5 flex flex-wrap justify-center gap-2 text-[10px] text-neutral dark:text-dark-muted">
+              <span className="rounded-full border border-neutral/10 dark:border-dark-border bg-white dark:bg-dark-bg-light px-3 py-1.5">
                 32+ solutions delivered
               </span>
-              <span className="rounded-full border border-neutral/10 bg-white px-3 py-1.5">
+              <span className="rounded-full border border-neutral/10 dark:border-dark-border bg-white dark:bg-dark-bg-light px-3 py-1.5">
                 Mutual NDA guarantee
               </span>
-              <span className="rounded-full border border-neutral/10 bg-white px-3 py-1.5">
+              <span className="rounded-full border border-neutral/10 dark:border-dark-border bg-white dark:bg-dark-bg-light px-3 py-1.5">
                 24/7 response SLA
               </span>
             </div>
@@ -365,17 +365,17 @@ export default function TopServices() {
 
           <div className="mt-16 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h2 className="text-xl font-bold text-ink">
+              <h2 className="text-xl font-bold text-ink dark:text-dark-text">
                 Top Services of{" "}
                 <span className="text-secondary">Ntechlabs</span>
               </h2>
-              <p className="mt-1 text-sm text-muted">
+              <p className="mt-1 text-sm text-muted dark:text-dark-muted">
                 High-impact engineering crafted for forward-thinking
                 enterprises.
               </p>
             </div>
 
-            <div className="flex w-fit rounded-full border border-neutral/10 bg-white p-1">
+            <div className="flex w-fit rounded-full border border-neutral/10 dark:border-dark-border bg-white dark:bg-dark-bg-light p-1">
               {categories.map((category) => (
                 <button
                   key={category}
@@ -385,7 +385,7 @@ export default function TopServices() {
                   className={`rounded-full px-3 py-1.5 text-[10px] font-medium transition-colors ${
                     activeCategory === category
                       ? "bg-primary text-white"
-                      : "text-neutral hover:text-secondary"
+                      : "text-neutral dark:text-dark-muted hover:text-secondary"
                   }`}
                 >
                   {category}
@@ -399,16 +399,16 @@ export default function TopServices() {
               <a
                 key={service.title}
                 href={service.href}
-                className="group rounded-xl border border-neutral/10 bg-white p-3 transition-shadow hover:shadow-lg hover:shadow-neutral/10"
+                className="group rounded-xl border border-neutral/10 dark:border-dark-border bg-white dark:bg-dark-bg-light p-3 transition-shadow hover:shadow-lg hover:shadow-neutral/10"
               >
                 <ServiceVisual kind={service.visual} />
                 <p className="mt-3 text-xs font-semibold uppercase tracking-tight text-secondary">
                   {String(index + 1).padStart(2, "0")} / {service.tags}
                 </p>
-                <h3 className="mt-1 text-sm font-bold text-ink">
+                <h3 className="mt-1 text-sm font-bold text-ink dark:text-dark-text">
                   {service.title}
                 </h3>
-                <p className="mt-1 text-sm leading-relaxed text-neutral">
+                <p className="mt-1 text-sm leading-relaxed text-neutral dark:text-dark-muted">
                   {service.description}
                 </p>
                 <span className="mt-3 inline-block text-[10px] font-semibold text-secondary group-hover:underline">
@@ -418,16 +418,16 @@ export default function TopServices() {
             ))}
           </div>
 
-          <section className="mt-14 grid items-center gap-8 overflow-hidden rounded-2xl border border-neutral/10 bg-white p-6 sm:p-8 lg:grid-cols-2">
+          <section className="mt-14 grid items-center gap-8 overflow-hidden rounded-2xl border border-neutral/10 dark:border-dark-border bg-white dark:bg-dark-bg-light p-6 sm:p-8 lg:grid-cols-2">
             <div>
               <p className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-[9px] font-semibold uppercase tracking-wide text-secondary">
                 • AI automation
               </p>
-              <h2 className="mt-4 max-w-md text-2xl font-bold leading-tight text-ink">
+              <h2 className="mt-4 max-w-md text-2xl font-bold leading-tight text-ink dark:text-dark-text">
                 Work smarter with{" "}
                 <span className="text-primary">intelligent automation.</span>
               </h2>
-              <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral">
+              <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral dark:text-dark-muted">
                 Streamline repetitive tasks, connect business processes, and
                 help your team focus on work that creates real value.
               </p>
@@ -440,7 +440,7 @@ export default function TopServices() {
             </div>
 
             <div className="rounded-xl bg-ink p-5 font-mono text-[10px] text-white shadow-lg">
-              <div className="flex justify-between border-b border-white/10 pb-3 text-muted">
+              <div className="flex justify-between border-b border-white/10 pb-3 text-muted dark:text-dark-muted">
                 <span>INPUT</span>
                 <span>PROCESS</span>
                 <span>RESULT</span>
@@ -466,12 +466,12 @@ export default function TopServices() {
           </section>
         </Container>
       </section>
-      <section id="capabilities" className="py-16 bg-neutral/5 sm:py-20">
+      <section id="capabilities" className="py-16 bg-neutral/5 dark:bg-dark-bg sm:py-20">
         <Container>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-secondary">
             Our capabilities
           </p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink dark:text-dark-text sm:text-4xl">
             Automation Solutions
           </h2>
 
@@ -479,21 +479,21 @@ export default function TopServices() {
             {capabilities.map((capability, index) => (
               <article
                 key={capability.title}
-                className="flex gap-4 rounded-2xl border border-neutral/10 bg-white p-5 sm:p-6"
+                className="flex gap-4 rounded-2xl border border-neutral/10 dark:border-dark-border bg-white dark:bg-dark-bg-light p-5 sm:p-6"
               >
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-primary/40 bg-primary/10 text-secondary">
                   <CapabilityIcon name={capability.icon} />
                 </span>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-base font-semibold text-ink sm:text-lg">
+                    <h3 className="text-base font-semibold text-ink dark:text-dark-text sm:text-lg">
                       {capability.title}
                     </h3>
-                    <span className="rounded border border-neutral/10 bg-neutral/5 px-2 py-0.5 font-mono text-xs text-muted">
+                    <span className="rounded border border-neutral/10 dark:border-dark-border bg-neutral/5 dark:bg-dark-bg px-2 py-0.5 font-mono text-xs text-muted dark:text-dark-muted">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                   </div>
-                  <p className="mt-1 text-sm leading-relaxed text-neutral">
+                  <p className="mt-1 text-sm leading-relaxed text-neutral dark:text-dark-muted">
                     {capability.description}
                   </p>
                 </div>
@@ -502,13 +502,13 @@ export default function TopServices() {
           </div>
         </Container>
       </section>
-      <section className="bg-neutral/5 pt-16 pb-0 sm:pt-20">
+      <section className="bg-neutral/5 dark:bg-dark-bg pt-16 pb-0 sm:pt-20">
         <Container>
           <div className="mx-auto max-w-4xl text-center">
             <p className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-secondary">
               Our approach
             </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink dark:text-dark-text sm:text-4xl">
               From first call to{" "}
               <span className="text-secondary">live system.</span>
             </h2>
@@ -541,13 +541,13 @@ export default function TopServices() {
                   key={step.title}
                   className="relative flex flex-col items-center text-center"
                 >
-                  <span className="z-10 flex h-8 w-8 items-center justify-center rounded-full border border-secondary bg-white text-xs font-semibold text-secondary">
+                  <span className="z-10 flex h-8 w-8 items-center justify-center rounded-full border border-secondary bg-white dark:bg-dark-bg-light text-xs font-semibold text-secondary">
                     {index + 1}
                   </span>
-                  <h3 className="mt-3 text-sm font-semibold text-ink">
+                  <h3 className="mt-3 text-sm font-semibold text-ink dark:text-dark-text">
                     {step.title}
                   </h3>
-                  <p className="mt-1 max-w-[190px] text-xs leading-relaxed text-neutral">
+                  <p className="mt-1 max-w-[190px] text-xs leading-relaxed text-neutral dark:text-dark-muted">
                     {step.description}
                   </p>
                 </article>
@@ -555,7 +555,7 @@ export default function TopServices() {
             </div>
           </div>
 
-          <div className="mx-auto mt-20 mb-5 flex max-w-6xl flex-col items-start justify-between gap-6 rounded-2xl bg-gradient-to-r from-secondary to-primary px-8 py-10 text-white shadow-lg sm:px-10 md:flex-row md:items-center">
+          <div className="mx-auto mt-20 mb-5 flex max-w-6xl flex-col items-start justify-between gap-6 rounded-2xl border border-transparent bg-gradient-to-r from-secondary to-primary px-8 py-10 text-white shadow-lg dark:border-dark-border dark:from-dark-nav-bg dark:to-dark-bg-light sm:px-10 md:flex-row md:items-center">
             <div>
               <h2 className="max-w-md text-2xl font-bold leading-tight sm:text-3xl">
                 Let’s build something
@@ -571,14 +571,14 @@ export default function TopServices() {
             </div>
             <a
               href="/talk-to-team"
-              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-ink shadow-md transition hover:brightness-105"
+              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-ink shadow-md transition hover:brightness-105 "
             >
               Talk to Our Team
               <span aria-hidden="true">↗</span>
             </a>
           </div>
         </Container>
-        <Footer2 />
+        <Footer2 darkTheme />
       </section>
     </>
   );

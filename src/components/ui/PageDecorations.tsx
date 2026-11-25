@@ -1,9 +1,18 @@
 import polygonDecoration from '@/assets/images/Polygon 2.svg'
 import dottedDecoration from '@/assets/images/dotted.svg'
 
-export default function PageDecorations() {
+export default function PageDecorations({
+  glowPosition = 'center',
+}: {
+  glowPosition?: 'center' | 'left'
+}) {
+  const glowPositionClass = glowPosition === 'left'
+    ? 'left-[8rem]'
+    : 'left-1/2 -translate-x-1/2'
+
   return (
     <>
+      <div className={`pointer-events-none absolute ${glowPositionClass} top-24 z-0 h-72 w-[40rem] rounded-full bg-primary/10 blur-3xl`} />
       <img
         aria-hidden="true"
         src={polygonDecoration}

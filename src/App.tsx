@@ -8,6 +8,7 @@ import Contact from "@/pages/Contact";
 import Blog from "@/pages/Blog";
 import BlogArticle from "@/pages/BlogArticle";
 import TalkToTeam from "@/pages/TalkToTeam";
+import SiteInfo from "@/pages/SiteInfo";
 
 export default function App() {
   return (
@@ -22,6 +23,10 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/talk-to-team" element={<TalkToTeam/>} />
+          <Route path="/terms" element={<SiteInfo page="terms" />} />
+          <Route path="/cookies" element={<SiteInfo page="cookies" />} />
+          <Route path="/privacy-policy" element={<SiteInfo page="privacy" />} />
+          <Route path="/sitemap" element={<SiteInfo page="sitemap" />} />
         </Routes>
       </Layout>
     </BrowserRouter>

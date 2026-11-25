@@ -21,7 +21,7 @@ const IconBox = () => (
 
 export default function Services() {
   return (
-    <section id="service" className="relative isolate overflow-hidden bg-neutral/4 py-20">
+    <section id="service" className="relative isolate overflow-hidden bg-neutral/4 dark:bg-dark-bg py-20">
       <img
         aria-hidden="true"
         src={dottedDecoration}
@@ -46,10 +46,10 @@ export default function Services() {
             <p className="flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-wide text-secondary">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" /> Our Services
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-ink">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-ink dark:text-dark-text">
               Technology solutions built around <span className="text-primary">your business.</span>
             </h2>
-            <p className="mt-3 text-sm text-muted">
+            <p className="mt-3 text-sm text-muted dark:text-dark-muted">
               We design, build and manage intelligent digital solutions that help organizations innovate, scale and stay
               ahead in a constantly evolving world.
             </p>
@@ -64,15 +64,15 @@ export default function Services() {
             <li key={i}>
               <a
                 href="#service"
-                className="group block h-full rounded-xl border border-neutral/30 bg-white p-5 transition hover:shadow-md hover:shadow-primary/30"
+                className="group block h-full rounded-xl border border-neutral/30 dark:border-dark-border bg-white dark:bg-dark-bg-light p-5 transition hover:shadow-md hover:shadow-primary/30"
               >
                 <div className="flex items-start justify-between">
                   <IconBox />
-                  <span className="text-[12px] text-muted">#{i + 1}</span>
+                  <span className="text-[12px] text-muted dark:text-dark-muted">#{i + 1}</span>
                 </div>
-                <h3 className="mt-3 font-semibold text-ink">{service.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{service.description}</p>
-                <div className="mt-4 flex items-center justify-between border-t border-neutral/70 pt-3 text-[11px] text-neutral">
+                <h3 className="mt-3 font-semibold text-ink dark:text-dark-text">{service.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted dark:text-dark-muted">{service.description}</p>
+                <div className="mt-4 flex items-center justify-between border-t border-neutral/70 dark:border-dark-border pt-3 text-[11px] text-neutral dark:text-dark-muted">
                   {service.tag}
                   <span className="text-secondary transition-transform group-hover:translate-x-0.5">
                     <Arrow />
