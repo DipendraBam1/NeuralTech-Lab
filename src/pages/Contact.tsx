@@ -35,7 +35,8 @@ export default function Contact() {
   return (
     <>
       <div className="relative overflow-hidden bg-neutral/5">
-        <img aria-hidden="true" src={polygonDecoration} alt="" className="pointer-events-none absolute -left-10 -top-8 h-[220px] w-[150px] object-contain object-left-top sm:h-[280px] sm:w-[166px]" />
+        <img aria-hidden="true" src={polygonDecoration} alt="" className="pointer-events-none absolute -left-10 -top-8 h-[220px] w-[150px] object-contain object-left-top opacity-75 sm:h-[280px] sm:w-[166px]" />
+        <img aria-hidden="true" src={dottedDecoration} alt="" className="pointer-events-none absolute -left-8 top-20 h-20 w-[72px] object-contain opacity-90" />
         <img aria-hidden="true" src={dottedDecoration} alt="" className="pointer-events-none absolute -right-3 top-3 hidden h-24 w-24 object-contain opacity-90 sm:block" />
         <img aria-hidden="true" src={dottedDecoration} alt="" className="pointer-events-none absolute -left-5 top-[46%] hidden h-24 w-24 rotate-180 object-contain opacity-90 md:block" />
 

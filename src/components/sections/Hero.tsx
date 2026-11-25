@@ -1,6 +1,9 @@
 import Container from '@/components/ui/Container'
 import Button from '@/components/ui/Button'
 import { useTypewriter } from '@/hooks/useTypewriter'
+import polygonDecoration from '@/assets/images/Polygon 2.svg'
+import leftPolygonDecoration from '@/assets/images/Polygon 1.svg'
+import dottedDecoration from '@/assets/images/dotted.svg'
  
 const TYPED_WORDS = ['Margins', 'Momentum', 'Markets'] // TODO: replace with the words from Figma
 const CHIPS = ['IT Consulting', 'Custom Software', 'AI Automation']
@@ -11,8 +14,38 @@ export default function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-neutral/5 pb-20 pt-28 sm:pt-32">
       <div className="pointer-events-none absolute left-1/2 top-24 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
+      <img
+        aria-hidden="true"
+        src={polygonDecoration}
+        alt=""
+        className="pointer-events-none absolute -right-12 -top-24 h-[230px] w-[290px] opacity-70 sm:h-[300px] sm:w-[380px]"
+      />
+      <img
+        aria-hidden="true"
+        src={leftPolygonDecoration}
+        alt=""
+        className="pointer-events-none absolute -left-16 -top-28 h-[240px] w-[140px] opacity-60 sm:h-[300px] sm:w-[166px]"
+      />
+      <img
+        aria-hidden="true"
+        src={dottedDecoration}
+        alt=""
+        className="pointer-events-none absolute -left-8 top-20 h-20 w-[72px] opacity-90"
+      />
+      <img
+        aria-hidden="true"
+        src={dottedDecoration}
+        alt=""
+        className="pointer-events-none absolute -left-10 top-[48%] h-24 w-24 opacity-90"
+      />
+      <img
+        aria-hidden="true"
+        src={dottedDecoration}
+        alt=""
+        className="pointer-events-none absolute -right-10 top-[53%] h-24 w-24 rotate-180 opacity-90"
+      />
 
-      <Container className="relative flex flex-col items-center text-center">
+      <Container className="relative z-10 flex flex-col items-center text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-3 py-1 text-[10px] font-medium uppercase tracking-wide text-secondary">
           <span className="h-1.5 w-1.5 rounded-full bg-primary" />
           AI &amp; Enterprise Software — Nepal · Australia
@@ -45,7 +78,7 @@ export default function Hero() {
         </ul>
 
         <div className="mt-7 flex flex-wrap justify-center gap-3">
-          <Button href="#contact">Talk to an Expert</Button>
+          <Button href="/talk-to-team">Talk to an Expert</Button>
           <Button href="#service" variant="outline">Explore Our Services →</Button>
         </div>
 

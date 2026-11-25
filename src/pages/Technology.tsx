@@ -3,6 +3,7 @@ import technologyGraph from '@/assets/images/technology-graph.svg'
 import TechnologyCTA from '@/components/sections/TechnologyCTA'
 import Footer2 from '@/components/layout/Footer2'
 import Container from '@/components/ui/Container'
+import PageDecorations from '@/components/ui/PageDecorations'
 
 const stacks = [
   {
@@ -39,8 +40,9 @@ function Eyebrow({ children }: { children: string }) {
 
 export default function Technology() {
   return (
-    <div className="min-h-screen bg-neutral/5">
-      <Container className="pt-28 lg:pt-32">
+    <div className="relative isolate min-h-screen overflow-hidden bg-neutral/5">
+      <PageDecorations />
+      <Container className="relative z-10 pt-28 lg:pt-32">
         <section className="grid items-center gap-12 pb-16 lg:grid-cols-[1.25fr_.75fr] lg:gap-20 lg:pb-20">
           <div>
             <Eyebrow>System Core // V4.0 Pro</Eyebrow>

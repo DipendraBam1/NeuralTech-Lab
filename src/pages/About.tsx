@@ -2,6 +2,7 @@ import card1 from '@/assets/images/aboutus-card1.svg'
 import card2 from '@/assets/images/aboutus-card2.svg'
 import Container from '@/components/ui/Container'
 import Footer2 from '@/components/layout/Footer2'
+import PageDecorations from '@/components/ui/PageDecorations'
 
 const values = [
   {
@@ -67,8 +68,9 @@ function CenterHeading({ eyebrow }: { eyebrow: string }) {
 export default function About() {
   return (
     <>
-      <div className="bg-neutral/5 pb-16 sm:pb-20">
-        <Container className="pt-28 sm:pt-32">
+      <div className="relative isolate overflow-hidden bg-neutral/5 pb-16 sm:pb-20">
+        <PageDecorations />
+        <Container className="relative z-10 pt-28 sm:pt-32">
           <CenterHeading eyebrow="Our approach" />
 
           <section className="grid items-center gap-8 py-12 sm:py-16 lg:grid-cols-[.82fr_1.18fr] lg:gap-12">

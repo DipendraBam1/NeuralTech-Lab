@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Container from '@/components/ui/Container'
 import Footer2 from '@/components/layout/Footer2'
+import PageDecorations from '@/components/ui/PageDecorations'
 import { articleSlug, articles } from './Blog'
 
 const articleSections = {
@@ -33,10 +34,13 @@ export default function BlogArticle() {
 
   if (!article) {
     return (
-      <Container className="py-24 text-center">
+      <div className="relative isolate overflow-hidden bg-neutral/5">
+        <PageDecorations />
+        <Container className="relative z-10 py-24 text-center">
         <h1 className="text-3xl font-bold text-ink">Article not found</h1>
         <Link to="/blog" className="mt-4 inline-block text-sm font-semibold text-secondary">Back to all articles →</Link>
-      </Container>
+        </Container>
+      </div>
     )
   }
 
@@ -66,8 +70,9 @@ export default function BlogArticle() {
 
   return (
     <>
-      <div className="bg-neutral/5 pb-16">
-        <Container className="pt-28 sm:pt-32">
+      <div className="relative isolate overflow-hidden bg-neutral/5 pb-16">
+        <PageDecorations />
+        <Container className="relative z-10 pt-28 sm:pt-32">
           <header className="max-w-4xl">
             <div className="flex flex-wrap items-center gap-2 font-mono text-[9px] font-semibold uppercase tracking-wide">
               <span className="rounded-full bg-primary/15 px-3 py-1.5 text-secondary">{article.category}</span>

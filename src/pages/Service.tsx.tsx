@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Container from "@/components/ui/Container";
 import Footer2 from "@/components/layout/Footer2";
+import PageDecorations from "@/components/ui/PageDecorations";
 
 type Category = "All" | "AI" | "Software" | "Business";
 
@@ -331,8 +332,12 @@ export default function TopServices() {
 
   return (
     <>
-      <section id="services" className="bg-neutral/5 pt-28 pb-16 sm:pt-32 sm:pb-20">
-        <Container>
+      <section
+        id="services"
+        className="relative isolate overflow-hidden bg-neutral/5 pt-28 pb-16 sm:pt-32 sm:pb-20"
+      >
+        <PageDecorations />
+        <Container className="relative z-10">
           <header className="mx-auto max-w-2xl text-center">
             <p className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-secondary">
               • Our services
@@ -565,7 +570,7 @@ export default function TopServices() {
               </p>
             </div>
             <a
-              href="mailto:nepal@ntechlabs.com"
+              href="/talk-to-team"
               className="inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-ink shadow-md transition hover:brightness-105"
             >
               Talk to Our Team
@@ -573,7 +578,7 @@ export default function TopServices() {
             </a>
           </div>
         </Container>
-<Footer2/>
+        <Footer2 />
       </section>
     </>
   );

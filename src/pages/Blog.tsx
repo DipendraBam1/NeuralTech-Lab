@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '@/components/ui/Container'
+import PageDecorations from '@/components/ui/PageDecorations'
 import Footer2 from '@/components/layout/Footer2'
 
 type Category = 'All Articles' | 'AI & Automation' | 'Software' | 'Data & Analytics'
@@ -161,8 +162,9 @@ export default function Blog() {
 
   return (
     <>
-      <div className="bg-neutral/5 pb-12 sm:pb-16">
-        <Container className="pt-28 sm:pt-32">
+      <div className="relative isolate overflow-hidden bg-neutral/5 pb-12 sm:pb-16">
+        <PageDecorations />
+        <Container className="relative z-10 pt-28 sm:pt-32">
           <header className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-extrabold leading-[.98] tracking-[-.05em] text-ink sm:text-5xl">
               Technology,<br /><span className="text-primary underline decoration-2 underline-offset-4">thoughtfully<br className="sm:hidden" /> explored.</span>
@@ -257,7 +259,7 @@ export default function Blog() {
               </div>
             </div>
             <div className="flex shrink-0 flex-col items-start gap-3 md:items-end">
-              <Link to="/contact" className="inline-flex items-center gap-3 rounded-2xl bg-ink px-7 py-4 text-sm font-semibold text-white shadow-md transition hover:bg-ink/90">
+              <Link to="/talk-to-team" className="inline-flex items-center gap-3 rounded-2xl bg-ink px-7 py-4 text-sm font-semibold text-white shadow-md transition hover:bg-ink/90">
                 Talk to Our Team <span className="text-primary">↗</span>
               </Link>
               <p className="font-mono text-[9px] uppercase tracking-[.15em] text-muted">Average response time: &lt; 2 hours</p>
