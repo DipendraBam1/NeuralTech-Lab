@@ -3,7 +3,6 @@ import contactImage from '@/assets/images/contact-card.svg'
 import polygonDecoration from '@/assets/images/Polygon 1.svg'
 import dottedDecoration from '@/assets/images/dotted.svg'
 import Container from '@/components/ui/Container'
-import Footer2 from '@/components/layout/Footer2'
 
 const services = [
   'AI Automation',
@@ -104,7 +103,6 @@ export default function Contact() {
           </div>
         </Container>
       </div>
-      <Footer2 darkTheme />
     </>
   )
 }

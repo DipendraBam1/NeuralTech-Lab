@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Container from '@/components/ui/Container'
-import Footer2 from '@/components/layout/Footer2'
 import PageDecorations from '@/components/ui/PageDecorations'
 import { articleSlug, articles } from './Blog'
 
@@ -155,7 +154,6 @@ export default function BlogArticle() {
           </section>
         </Container>
       </div>
-      <Footer2 />
     </>
   )
 }

@@ -1,7 +1,6 @@
 import card1 from '@/assets/images/aboutus-card1.svg'
 import card2 from '@/assets/images/aboutus-card2.svg'
 import Container from '@/components/ui/Container'
-import Footer2 from '@/components/layout/Footer2'
 import PageDecorations from '@/components/ui/PageDecorations'
 
 const values = [
@@ -162,7 +161,6 @@ export default function About() {
           </section>
         </Container>
       </div>
-      <Footer2 darkTheme />
     </>
   )
 }

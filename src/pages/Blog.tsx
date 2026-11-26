@@ -2,7 +2,6 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '@/components/ui/Container'
 import PageDecorations from '@/components/ui/PageDecorations'
-import Footer2 from '@/components/layout/Footer2'
 
 type Category = 'All Articles' | 'AI & Automation' | 'Software' | 'Data & Analytics'
 type VisualKind = 'code' | 'analytics' | 'network' | 'system'
@@ -265,7 +264,6 @@ export default function Blog() {
           </section>
         </Container>
       </div>
-      <Footer2 darkTheme />
     </>
   )
 }

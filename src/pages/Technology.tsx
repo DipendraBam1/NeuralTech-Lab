@@ -1,7 +1,6 @@
 import technologyCard from '@/assets/images/technology-card.svg'
 import technologyGraph from '@/assets/images/technology-graph.svg'
 import TechnologyCTA from '@/components/sections/TechnologyCTA'
-import Footer2 from '@/components/layout/Footer2'
 import Container from '@/components/ui/Container'
 import PageDecorations from '@/components/ui/PageDecorations'
 import { Link } from 'react-router-dom'
@@ -97,8 +96,6 @@ export default function Technology() {
 
         <TechnologyCTA />
       </Container>
-              <Footer2 darkTheme />
-
     </div>
   )
 }

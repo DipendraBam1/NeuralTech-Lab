@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Container from "@/components/ui/Container";
-import Footer2 from "@/components/layout/Footer2";
 import PageDecorations from "@/components/ui/PageDecorations";
 
 type Category = "All" | "AI" | "Software" | "Business";
@@ -556,7 +555,7 @@ export default function TopServices() {
             </div>
           </div>
 
-          <div className="mx-auto mt-20 mb-5 flex max-w-6xl flex-col items-start justify-between gap-6 rounded-2xl border border-transparent bg-gradient-to-r from-secondary to-primary px-8 py-10 text-white shadow-lg dark:border-dark-border dark:from-dark-nav-bg dark:to-dark-bg-light sm:px-10 md:flex-row md:items-center">
+          <div className="mx-auto mt-20 flex max-w-6xl flex-col items-start justify-between gap-6 rounded-2xl border border-transparent bg-gradient-to-r from-secondary to-primary px-8 py-10 text-white shadow-lg dark:border-dark-border dark:from-dark-nav-bg dark:to-dark-bg-light sm:px-10 md:flex-row md:items-center">
             <div>
               <h2 className="max-w-md text-2xl font-bold leading-tight sm:text-3xl">
                 Let’s build something
@@ -579,7 +578,6 @@ export default function TopServices() {
             </a>
           </div>
         </Container>
-        <Footer2 darkTheme />
       </section>
     </>
   );

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import Container from '@/components/ui/Container'
-import Footer2 from '@/components/layout/Footer2'
 import PageDecorations from '@/components/ui/PageDecorations'
 
 type PageId = 'terms' | 'cookies' | 'privacy' | 'sitemap'
@@ -137,7 +136,6 @@ export default function SiteInfo({ page }: { page: PageId }) {
           </div>
         </Container>
       </div>
-      <Footer2 darkTheme />
     </>
   )
 }

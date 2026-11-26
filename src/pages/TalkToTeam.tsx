@@ -8,7 +8,6 @@ import {
   ShieldCheck,
 } from 'lucide-react'
 import Container from '@/components/ui/Container'
-import Footer2 from '@/components/layout/Footer2'
 import polygonDecoration from '@/assets/images/Polygon 1.svg'
 import dottedDecoration from '@/assets/images/dotted.svg'
 
@@ -368,7 +367,6 @@ export default function TalkToTeam() {
         </Container>
       </div>
 
-      <Footer2 darkTheme />
     </div>
   )
 }
