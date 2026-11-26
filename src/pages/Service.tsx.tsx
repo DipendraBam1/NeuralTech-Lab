@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Container from "@/components/ui/Container";
 import Footer2 from "@/components/layout/Footer2";
 import PageDecorations from "@/components/ui/PageDecorations";
@@ -99,7 +100,7 @@ const services: Service[] = [
       "Automate repetitive tasks and workflows with reliable algorithmic processing.",
     category: "AI",
     tags: "AI / AUTOMATION",
-    href: "#ai-automation",
+    href: "/services/ai-automation",
     visual: "automation",
   },
   {
@@ -108,7 +109,7 @@ const services: Service[] = [
       "Build enterprise-ready digital products engineered around your bespoke operational needs.",
     category: "Software",
     tags: "WEB / SOFTWARE",
-    href: "#custom-software",
+    href: "/services/custom-software",
     visual: "software",
   },
   {
@@ -117,7 +118,7 @@ const services: Service[] = [
       "Modernize public services with secure, auditable, and resilient citizen-first digital systems.",
     category: "Business",
     tags: "PUBLIC SECTOR",
-    href: "#government-technology",
+    href: "/services/government-technology",
     visual: "government",
   },
   {
@@ -126,7 +127,7 @@ const services: Service[] = [
       "Connect fragmented supply-chain, inventory, and financial operations into one workflow.",
     category: "Business",
     tags: "ERP / SYSTEMS",
-    href: "#erp-systems",
+    href: "/services/erp-systems",
     visual: "erp",
   },
   {
@@ -135,7 +136,7 @@ const services: Service[] = [
       "Create autonomous cognitive assistants tailored to parse and resolve complex multi-step workflows.",
     category: "AI",
     tags: "AI / INTELLIGENT SYSTEMS",
-    href: "#ai-agents",
+    href: "/services/ai-agents",
     visual: "agents",
   },
   {
@@ -144,7 +145,7 @@ const services: Service[] = [
       "Turn high-volume business logs into real-time visual telemetry and actionable predictive insights.",
     category: "AI",
     tags: "AI / DATA / INSIGHTS",
-    href: "#data-analytics",
+    href: "/services/data-analytics",
     visual: "analytics",
   },
   {
@@ -153,7 +154,7 @@ const services: Service[] = [
       "Augment your engineering team with specialized senior technical talent embedded seamlessly.",
     category: "Software",
     tags: "IT / ENGINEERING",
-    href: "#dedicated-teams",
+    href: "/services/dedicated-teams",
     visual: "teams",
   },
   {
@@ -162,7 +163,7 @@ const services: Service[] = [
       "Keep your production infrastructure secure, resilient, and performing at peak capacity 24/7/365.",
     category: "Software",
     tags: "IT / SERVICE SUPPORT",
-    href: "#maintenance-support",
+    href: "/services/maintenance-support",
     visual: "support",
   },
 ];
@@ -396,9 +397,9 @@ export default function TopServices() {
 
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
             {visibleServices.map((service, index) => (
-              <a
+              <Link
                 key={service.title}
-                href={service.href}
+                to={service.href}
                 className="group rounded-xl border border-neutral/10 dark:border-dark-border bg-white dark:bg-dark-bg-light p-3 transition-shadow hover:shadow-lg hover:shadow-neutral/10"
               >
                 <ServiceVisual kind={service.visual} />
@@ -411,10 +412,10 @@ export default function TopServices() {
                 <p className="mt-1 text-sm leading-relaxed text-neutral dark:text-dark-muted">
                   {service.description}
                 </p>
-                <span className="mt-3 inline-block text-[10px] font-semibold text-secondary group-hover:underline">
+                <span className="mt-3 inline-block text-[11px] font-semibold text-secondary group-hover:underline">
                   Explore service ↗
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -431,12 +432,12 @@ export default function TopServices() {
                 Streamline repetitive tasks, connect business processes, and
                 help your team focus on work that creates real value.
               </p>
-              <a
-                href="#ai-automation"
+              <Link
+                to="/services/ai-automation"
                 className="mt-5 border rounded-full p-3 inline-flex text-xs font-semibold text-white bg-secondary"
               >
                 Explore AI automation ↗
-              </a>
+              </Link>
             </div>
 
             <div className="rounded-xl bg-ink p-5 font-mono text-[10px] text-white shadow-lg">

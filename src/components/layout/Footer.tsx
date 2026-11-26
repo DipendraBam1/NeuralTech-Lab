@@ -1,29 +1,34 @@
-import logo from '@/assets/icons/logo.svg'
-import Container from '@/components/ui/Container'
+import logo from "@/assets/icons/logo.svg";
+import Container from "@/components/ui/Container";
 
 const navigation = [
-  'Home',
-  'Services',
-    'Clients',
-  'Contact Us',
-  'Talk to Our Team',
-]
+  "Home",
+  "Services",
+  "Clients",
+  "Contact Us",
+  "Talk to Our Team",
+];
 
 const linkTargets: Record<string, string> = {
-  Home: '/',
-  Services: '#service',
-    Clients: '/#clients',
-  'Contact Us': '/contact',
-  'Talk to Our Team': '/talk-to-team',
-}
+  Home: "/",
+  Services: "#service",
+  Clients: "/#clients",
+  "Contact Us": "/contact",
+  "Talk to Our Team": "/talk-to-team",
+  "AI Automation & Workflows": "/services/ai-automation",
+  "Custom Software Engineering": "/services/custom-software",
+  "Government Technology": "/services/government-technology",
+  "Cloud Solutions & DevOps": "/services/cloud-devops",
+  "Dedicated Development Teams": "/services/dedicated-teams",
+};
 
 const solutions = [
-  'AI Automation & Workflows',
-  'Custom Software Engineering',
-  'Government Technology',
-  'Cloud Solutions & DevOps',
-  'Dedicated Development Teams',
-]
+  "AI Automation & Workflows",
+  "Custom Software Engineering",
+  "Government Technology",
+  "Cloud Solutions & DevOps",
+  "Dedicated Development Teams",
+];
 
 export default function Footer() {
   return (
@@ -31,7 +36,13 @@ export default function Footer() {
       <Container>
         <div className="grid gap-10 py-10 sm:grid-cols-2 lg:grid-cols-[1.7fr_0.8fr_1fr_1.5fr]">
           <div>
-            <img src={logo} alt="Neural Tech Labs" width={121} height={43} className="dark:brightness-0 dark:invert" />
+            <img
+              src={logo}
+              alt="Neural Tech Labs"
+              width={121}
+              height={43}
+              className="dark:brightness-0 dark:invert"
+            />
 
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted dark:text-dark-muted">
               Neural Tech Labs (Ntechlabs) is an AI and enterprise software
@@ -41,9 +52,9 @@ export default function Footer() {
 
             <div className="mt-4 flex gap-2" aria-label="Social links">
               {[
-                ['in', 'LinkedIn'],
-                ['git', 'GitHub'],
-                ['x', 'X'],
+                ["in", "LinkedIn"],
+                ["git", "GitHub"],
+                ["x", "X"],
               ].map(([label, name]) => (
                 <a
                   key={name}
@@ -78,11 +89,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-
       </Container>
     </footer>
-  )
+  );
 }
 
 function FooterLinks({ title, links }: { title: string; links: string[] }) {
@@ -94,14 +103,17 @@ function FooterLinks({ title, links }: { title: string; links: string[] }) {
       <ul className="mt-3 space-y-2">
         {links.map((link) => (
           <li key={link}>
-            <a href={linkTargets[link] ?? '#'} className="text-xs text-neutral dark:text-dark-muted hover:text-secondary">
+            <a
+              href={linkTargets[link] ?? "#"}
+              className="text-xs text-neutral dark:text-dark-muted hover:text-secondary"
+            >
               {link}
             </a>
           </li>
         ))}
       </ul>
     </div>
-  )
+  );
 }
 
 function HubCard({
@@ -109,14 +121,18 @@ function HubCard({
   location,
   email,
 }: {
-  name: string
-  location: string
-  email: string
+  name: string;
+  location: string;
+  email: string;
 }) {
   return (
     <article className="rounded-lg border border-neutral/10 dark:border-dark-border bg-neutral/5 dark:bg-dark-bg p-3">
-      <h3 className="text-xs font-semibold text-ink dark:text-dark-text">▣ &nbsp;{name}</h3>
-      <p className="mt-1 pl-5 text-[11px] text-muted dark:text-dark-muted">{location}</p>
+      <h3 className="text-xs font-semibold text-ink dark:text-dark-text">
+        ▣ &nbsp;{name}
+      </h3>
+      <p className="mt-1 pl-5 text-[11px] text-muted dark:text-dark-muted">
+        {location}
+      </p>
       <a
         href={`mailto:${email}`}
         className="mt-1 block pl-5 text-[11px] font-medium text-secondary"
@@ -124,5 +140,5 @@ function HubCard({
         {email}
       </a>
     </article>
-  )
+  );
 }

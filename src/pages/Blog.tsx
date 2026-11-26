@@ -204,9 +204,7 @@ export default function Blog() {
                     {item}
                   </button>
                 ))}
-                <button type="button" onClick={() => setCategory('All Articles')} className="ml-1 text-xs font-semibold text-secondary hover:underline">
-                  View All Articles ↗
-                </button>
+
               </div>
             </div>
 

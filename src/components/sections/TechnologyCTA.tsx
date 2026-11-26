@@ -23,7 +23,7 @@ export default function TechnologyCTA() {
           Discuss your project <span aria-hidden="true">↗</span>
         </a>
         <Link
-          to="/#about"
+          to="/contact"
           className="inline-flex items-center justify-center gap-2 rounded-full border border-secondary/10 bg-background/90 dark:bg-dark-bg-light/90 px-5 py-2.5 text-[10px] font-semibold text-ink dark:text-dark-text transition hover:border-secondary/30 hover:text-secondary"
         >
           Have a Question <span aria-hidden="true">?</span>

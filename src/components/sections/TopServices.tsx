@@ -1,4 +1,5 @@
 import Container from '@/components/ui/Container'
+import { Link } from 'react-router-dom'
 import { TOP_SERVICES } from '@/data/topservices'
  
 const Chevron = () => (
@@ -23,8 +24,8 @@ export default function TopServices() {
         <ul className="mt-10 flex flex-col gap-3">
           {TOP_SERVICES.map((item, i) => (
             <li key={i}>
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className="group flex items-center gap-3 rounded-xl border border-slate-200 dark:border-dark-border bg-white dark:bg-dark-bg-light px-4 py-3.5 transition-colors hover:border-emerald-300 hover:bg-emerald-50/40 dark:hover:bg-secondary/10"
               >
                 <span className="rounded bg-slate-100 dark:bg-dark-bg-light px-1.5 py-0.5 font-mono text-[9px] text-neutral dark:text-dark-muted">
@@ -34,7 +35,7 @@ export default function TopServices() {
                 <span className="text-slate-400 dark:text-dark-muted transition-transform group-hover:translate-x-0.5 group-hover:text-emerald-600">
                   <Chevron />
                 </span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

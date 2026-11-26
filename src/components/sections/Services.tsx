@@ -1,4 +1,5 @@
 import Container from '@/components/ui/Container'
+import { Link } from 'react-router-dom'
 import { SERVICES } from '@/data/services'
 import polygonDecoration from '@/assets/images/Polygon 1.svg'
 import dottedDecoration from '@/assets/images/dotted.svg'
@@ -62,8 +63,8 @@ export default function Services() {
         <ul className="mt-12 grid gap-4 md:grid-cols-2">
           {SERVICES.map((service, i) => (
             <li key={i}>
-              <a
-                href="#service"
+              <Link
+                to={service.href}
                 className="group block h-full rounded-xl border border-neutral/30 dark:border-dark-border bg-white dark:bg-dark-bg-light p-5 transition hover:shadow-md hover:shadow-primary/30"
               >
                 <div className="flex items-start justify-between">
@@ -78,7 +79,7 @@ export default function Services() {
                     <Arrow />
                   </span>
                 </div>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

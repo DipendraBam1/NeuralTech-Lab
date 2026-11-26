@@ -9,6 +9,8 @@ import Blog from "@/pages/Blog";
 import BlogArticle from "@/pages/BlogArticle";
 import TalkToTeam from "@/pages/TalkToTeam";
 import SiteInfo from "@/pages/SiteInfo";
+import ServiceDetail from "@/pages/ServiceDetail";
+import TechnologyDetail from "@/pages/TechnologyDetail";
 
 export default function App() {
   return (
@@ -17,7 +19,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<TopServices />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/technology" element={<Technology />} />
+          <Route path="/technology/:slug" element={<TechnologyDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />

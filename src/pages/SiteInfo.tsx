@@ -90,7 +90,7 @@ export default function SiteInfo({ page }: { page: PageId }) {
 
           <div className="mx-auto mt-10 grid max-w-5xl gap-6 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-8">
             <aside className="h-fit rounded-2xl border border-neutral/10 bg-background p-5 dark:border-dark-border dark:bg-dark-bg-light lg:sticky lg:top-28">
-              <p className="text-xs font-semibold uppercase tracking-wide text-muted dark:text-dark-muted">On this page</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-primary/60 dark:text-dark-muted">On this page</p>
               <nav className="mt-3 space-y-1" aria-label="Page sections">
                 {content.sections.map((section, index) => (
                   <a
@@ -103,6 +103,7 @@ export default function SiteInfo({ page }: { page: PageId }) {
                 ))}
               </nav>
             </aside>
+
 
             <div className="space-y-4">
               {content.sections.map((section, index) => (

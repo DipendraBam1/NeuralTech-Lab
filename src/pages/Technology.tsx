@@ -4,25 +4,27 @@ import TechnologyCTA from '@/components/sections/TechnologyCTA'
 import Footer2 from '@/components/layout/Footer2'
 import Container from '@/components/ui/Container'
 import PageDecorations from '@/components/ui/PageDecorations'
+import { Link } from 'react-router-dom'
+import { technologyPath } from '@/data/technologyDetails'
 
 const stacks = [
   {
-    index: '01 / FRONTEND', title: 'High-Throughput Clients', label: 'INTERACTIVE UI',
+    slug: 'frontend', index: '01 / FRONTEND', title: 'High-Throughput Clients', label: 'INTERACTIVE UI',
     tags: ['React 19', 'Next.js App Router', 'TypeScript', 'Tailwind CSS', 'WASM'],
     foot: '100 Lighthouse', metric: '<20ms INP Target',
   },
   {
-    index: '04 / COGNITIVE', title: 'Autonomous Agent Mesh', label: 'REASONING',
+    slug: 'ai-agents', index: '04 / COGNITIVE', title: 'Autonomous Agent Mesh', label: 'REASONING',
     tags: ['PyTorch', 'LangGraph', 'Gradient Vector', 'Claude & GPT-4o', 'vLLM Inference'],
     foot: 'Real-Time Semantic Loop', metric: '<60s First Token',
   },
   {
-    index: '02 / RUNTIME', title: 'Event Streams & Microservices', label: 'DISTRIBUTED',
+    slug: 'runtime', index: '02 / RUNTIME', title: 'Event Streams & Microservices', label: 'DISTRIBUTED',
     tags: ['Bun / Node', 'FastAPI', 'Laravel 11', 'gRPC', 'OpenAPI v3'],
     foot: 'Async Non-blocking', metric: 'Zero Thread Contention',
   },
   {
-    index: '03 / DATA & MEMORY', title: 'Persistent & Vector Fabric', label: 'STATE FABRIC',
+    slug: 'data-platform', index: '03 / DATA & MEMORY', title: 'Persistent & Vector Fabric', label: 'STATE FABRIC',
     tags: ['pgvector', 'MySQL 8.0', 'Redis Cluster', 'Kubernetes', 'AWS/GCP'],
     foot: 'Active / Active Multi-Region', metric: 'RPO 0 / RTO < 30s',
   },
@@ -71,12 +73,13 @@ export default function Technology() {
           <h2 className="mt-3 text-3xl font-bold tracking-[-.04em] text-ink dark:text-dark-text">Production Stack</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-neutral dark:text-dark-muted">Battle-tested runtime environments engineered for speed, low memory overhead, and deterministic scaling.</p>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
-            {stacks.map((stack) => <article key={stack.index} className="flex min-h-[180px] flex-col rounded-2xl border border-neutral/10 dark:border-dark-border bg-background dark:bg-dark-bg-light p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+            {stacks.map((stack) => <Link to={technologyPath(stack.slug)} key={stack.index} className="group flex min-h-[180px] flex-col rounded-2xl border border-neutral/10 dark:border-dark-border bg-background dark:bg-dark-bg-light p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-secondary/40 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-secondary">
               <div className="flex items-center justify-between gap-3"><span className="font-mono text-[10px] font-semibold tracking-wider text-secondary">{stack.index}</span><span className="rounded border border-secondary/20 bg-primary/10 px-2 py-1 font-mono text-[9px] uppercase text-secondary">{stack.label}</span></div>
               <h3 className="mt-3 text-base font-semibold tracking-tight text-ink dark:text-dark-text">{stack.title}</h3>
+              <span className="mt-2 text-xs font-semibold text-secondary group-hover:underline">Explore technology →</span>
               <div className="mt-3 flex flex-wrap gap-1.5">{stack.tags.map((tag) => <span key={tag} className="rounded bg-neutral/5 dark:bg-dark-bg px-2 py-1 font-mono text-[10px] text-neutral dark:text-dark-muted">{tag}</span>)}</div>
               <div className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-neutral/10 dark:border-dark-border pt-3 mt-4 font-mono text-[9px]"><span className="text-secondary">● {stack.foot}</span><span className="text-muted dark:text-dark-muted">{stack.metric}</span></div>
-            </article>)}
+            </Link>)}
           </div>
         </section>
 
